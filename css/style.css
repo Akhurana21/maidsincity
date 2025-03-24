@@ -13,7 +13,7 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Inter', Arial, sans-serif;
     line-height: 1.6;
     color: var(--text-color);
 }
@@ -26,7 +26,8 @@ body {
 
 /* Header Styles */
 header {
-    background-color: var(--primary-color);
+    /* background-color: var(--primary-color); */
+    background-image: url('../images/Group-1.png');
     padding: 1rem 0;
     width: 100%;
     top: 0;
@@ -71,21 +72,47 @@ nav {
     list-style: none;
 }
 
+/* .nav-links li a {
+    color: var(--white);
+    text-decoration: none;
+    padding: 0 1.5rem;
+    transition: color 0.3s;
+} */
+
 .nav-links li a {
     color: var(--white);
     text-decoration: none;
     padding: 0 1.5rem;
     transition: color 0.3s;
+    letter-spacing: 0.05em;
+    /* Adjust spacing as needed */
 }
 
 .nav-links li a:hover {
     color: var(--secondary-color);
 }
 
+.nav-links li a.active {
+    color: var(--secondary-color);
+    font-weight: bold;
+    /* border-bottom: 2px solid var(--secondary-color); */
+}
+
 /* Hero Section */
-.hero {
+/* .hero {
     background-color: var(--primary-color);
-    padding: 10px 0 50px;
+    padding: 10px 0 40px;
+    text-align: center;
+    color: var(--white);
+} */
+
+.hero {
+    /* background-color: var(--primary-color); */
+    background-image: url('../images/Group-1.png');
+    /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    padding: 10px 0 40px;
     text-align: center;
     color: var(--white);
 }
@@ -111,6 +138,27 @@ nav {
     padding: 5rem 0;
 }
 
+.about h2 {
+    position: relative;
+    display: inline-block;
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    letter-spacing: 0.05em;
+    /* Adjust spacing as needed */
+}
+
+.about h2::after {
+    content: '';
+    display: block;
+    width: 149%;
+    height: 2px;
+    background: linear-gradient(to right, var(--primary-color), transparent);
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
 .about-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -124,9 +172,49 @@ nav {
     margin-bottom: 1rem;
 }
 
+.about-text {
+    font-family: 'Inter', sans-serif;
+    /* Ensure the font is set to Inter */
+    color: #162055;
+    /* Set the text color */
+    line-height: 1.6;
+    /* Adjust line height for readability */
+}
+
+.about-text h3 {
+    font-size: 1.5rem;
+    /* Adjust the size as needed */
+    font-weight: 700;
+    /* Bold weight */
+    margin-bottom: 1rem;
+    /* Space below the heading */
+}
+
+.about-text p {
+    font-size: 1rem;
+    /* Adjust the size as needed */
+    margin-bottom: 1rem;
+    text-align: justify;
+    /* Space below paragraphs */
+}
+
+.about-text ul {
+    margin-left: 20px;
+    /* Indent the list */
+    list-style-type: disc;
+    text-align: justify;
+    /* Use bullet points */
+}
+
+.about-text ul li {
+    margin-bottom: 0.5rem;
+    text-align: justify;
+    /* Space between list items */
+}
+
 /* Services Section */
 .services {
-    background-color: #f5f5f5;
+    /* background-color: #f5f5f5; */
     padding: 5rem 0;
 }
 
@@ -226,4 +314,490 @@ footer {
     .stats-grid {
         grid-template-columns: 1fr;
     }
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    color: var(--white);
+    background-color: transparent;
+    border: 2px solid var(--secondary-color);
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.button-container {
+    text-align: center;
+    /* Center the button */
+    margin-top: 1rem;
+    /* Space above the button */
+}
+
+.abtbtn {
+    display: inline-block;
+    padding: 10px 20px;
+    color: var(--secondary-color);
+    /* Set text color to secondary color */
+    background-color: #162055;
+    /* Set background color to white */
+    border: none;
+    /* Remove border */
+    border-radius: 5px;
+    /* Rounded corners */
+    font-size: 1rem;
+    /* Font size */
+    font-weight: bold;
+    /* Bold text */
+    text-decoration: none;
+    /* Remove underline */
+    transition: background-color 0.3s, color 0.3s;
+    /* Smooth transition */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    /* Add shadow for depth */
+    letter-spacing: 0.05em;
+}
+
+.abtbtn:hover {
+    background-color: var(--secondary-color);
+    /* Change background on hover */
+    color: var(--white);
+    /* Change text color on hover */
+}
+
+.servicescontainer {
+    background-color: #162055;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 0 25px 20px;
+}
+
+.servicescontainer h2 {
+    font-size: 2rem;
+    /* Adjust font size */
+    color: #fff;
+    /* Set text color */
+    letter-spacing: 0.05em;
+    /* Adjust letter spacing */
+    text-align: center;
+    /* Center the heading */
+    position: relative;
+    /* Position relative for the pseudo-element */
+    margin-bottom: 20px;
+    /* Space below the heading */
+}
+
+.servicescontainer h2::after {
+    content: '';
+    display: block;
+    width: 50%;
+    /* Full width */
+    height: 2px;
+    /* Height of the underline */
+    background: radial-gradient(circle, #fff, transparent);
+    /* Radial gradient */
+    position: absolute;
+    bottom: -5px;
+    /* Position it below the text */
+    left: 50%;
+    transform: translateX(-50%);
+    /* Center the gradient */
+    /* Align to the left */
+}
+
+.additional-content {
+    margin-top: 1rem;
+    /* Space above the additional content */
+    color: #162055;
+    /* Set text color */
+    text-align: center;
+    /* Center align text */
+}
+
+.additional-content h4 {
+    margin-top: 1rem;
+    /* Space above each heading */
+    font-size: 1.5rem;
+    /* Adjust heading size */
+}
+
+.additional-content p {
+    margin-bottom: 1rem;
+    /* Space below each paragraph */
+}
+
+
+.tabs {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    /* Space below the tabs */
+    background-color: #8A8FAA;
+    /* Background color for the tab container */
+    border-radius: 5px;
+    /* Rounded corners for the tab container */
+    padding: 10px;
+
+    /* Padding around the tabs */
+}
+
+.tab-button {
+    background-color: transparent;
+    /* Transparent background for buttons */
+    color: #162055;
+    /* Dark text color */
+    border: 2px solid transparent;
+    /* Transparent border */
+    border-radius: 5px;
+    /* Rounded corners for buttons */
+    padding: 10px 20px;
+    /* Padding for buttons */
+    margin: 0 5px;
+    /* Space between buttons */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    transition: background-color 0.3s, color 0.3s, border 0.3s;
+    /* Smooth transition */
+}
+
+
+.tab-content {
+    text-align: center;
+    /* Center align text in tab content */
+}
+
+.tab-button[data-tab="housekeeper"] {
+    background-image: url('../images/housekeeper.png');
+    /* Replace with the correct path */
+    background-size: contain;
+    /* Ensure the image fits within the button */
+    background-repeat: no-repeat;
+    /* Prevent the image from repeating */
+    background-position: center;
+    /* Center the image */
+    color: transparent;
+    /* Hide the text color */
+    /* border: 2px solid #ffd700; */
+    /* Optional: border color */
+    padding: 10px 20px;
+    /* Adjust padding as needed */
+    height: 108px;
+    /* Set a fixed height for the button */
+    width: 150px;
+    /* Set a fixed width for the button */
+}
+
+.tab-button[data-tab="housekeeper"]:hover {
+    background-image: url('../images/housekeeperhighlight.png');
+    /* Image on hover */
+}
+
+.tab-button[data-tab="housekeeper"].active {
+    background-image: url('../images/housekeeperhighlight.png');
+    /* Image when active */
+}
+
+.tab-button[data-tab="baby-caretaker"] {
+    background-image: url('../images/babycaretaker.png');
+    /* Replace with the correct path */
+    background-size: contain;
+    /* Ensure the image fits within the button */
+    background-repeat: no-repeat;
+    /* Prevent the image from repeating */
+    background-position: center;
+    /* Center the image */
+    color: transparent;
+    /* Hide the text color */
+    /* border: 2px solid #ffd700; */
+    /* Optional: border color */
+    padding: 10px 20px;
+    /* Adjust padding as needed */
+    height: 108px;
+    /* Set a fixed height for the button */
+    width: 150px;
+    /* Set a fixed width for the button */
+}
+
+.tab-button[data-tab="baby-caretaker"]:hover {
+    background-image: url('../images/babycaretakerhighlight.png');
+    /* Image on hover */
+}
+
+.tab-button[data-tab="baby-caretaker"].active {
+    background-image: url('../images/babycaretakerhighlight.png');
+    /* Image when active */
+}
+
+.tab-button[data-tab="patient-caretaker"] {
+    background-image: url('../images/patientcaretaker.png');
+    /* Replace with the correct path */
+    background-size: contain;
+    /* Ensure the image fits within the button */
+    background-repeat: no-repeat;
+    /* Prevent the image from repeating */
+    background-position: center;
+    /* Center the image */
+    color: transparent;
+    /* Hide the text color */
+    /* border: 2px solid #ffd700; */
+    /* Optional: border color */
+    padding: 10px 20px;
+    /* Adjust padding as needed */
+    height: 108px;
+    /* Set a fixed height for the button */
+    width: 150px;
+    /* Set a fixed width for the button */
+}
+
+.tab-button[data-tab="patient-caretaker"]:hover {
+    background-image: url('../images/patientcaretakerhighlight.png');
+    /* Image on hover */
+}
+
+.tab-button[data-tab="patient-caretaker"].active {
+    background-image: url('../images/patientcaretakerhighlight.png');
+    /* Image when active */
+}
+
+.tab-button[data-tab="japa-maids"] {
+    background-image: url('../images/japamaids.png');
+    /* Replace with the correct path */
+    background-size: contain;
+    /* Ensure the image fits within the button */
+    background-repeat: no-repeat;
+    /* Prevent the image from repeating */
+    background-position: center;
+    /* Center the image */
+    color: transparent;
+    /* Hide the text color */
+    /* border: 2px solid #ffd700; */
+    /* Optional: border color */
+    padding: 10px 20px;
+    /* Adjust padding as needed */
+    height: 108px;
+    /* Set a fixed height for the button */
+    width: 150px;
+    /* Set a fixed width for the button */
+}
+
+.tab-button[data-tab="japa-maids"]:hover {
+    background-image: url('../images/japamaidshighlights.png');
+    /* Image on hover */
+}
+
+.tab-button[data-tab="japa-maids"].active {
+    background-image: url('../images/japamaidshighlights.png');
+    /* Image when active */
+}
+
+
+.tab-content h3 {
+    font-size: 1.3rem;
+    letter-spacing: 0.06em;
+    color: #fff;
+    text-align: left;
+    margin-left: 25px;
+}
+
+.housekeeper-data {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* gap: 3rem;
+    align-items: center; */
+}
+
+.housekeeper-content {
+    color: #fff;
+    text-align: left;
+    margin-left: 45px;
+    margin-top: 10px;
+}
+
+
+.housekeeper-image {
+    margin-right: 25px;
+    display: flex;
+    /* Use flexbox for alignment */
+    justify-content: flex-end;
+    /* Align the image to the right */
+    /* Space between text and image */
+}
+
+.housekeeper-image img {
+    width: 70%;
+    /* Set the image width to 30% */
+    height: auto;
+    /* Maintain aspect ratio */
+}
+
+.baby-caretaker-data {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* gap: 3rem;
+    align-items: center; */
+}
+
+.baby-caretaker-content {
+    color: #fff;
+    text-align: left;
+    margin-left: 45px;
+    margin-top: 10px;
+}
+
+
+.baby-caretaker-image {
+    margin-right: 25px;
+    display: flex;
+    /* Use flexbox for alignment */
+    justify-content: flex-end;
+    /* Align the image to the right */
+    /* Space between text and image */
+}
+
+.baby-caretaker-image img {
+    width: 70%;
+    /* Set the image width to 30% */
+    height: auto;
+    /* Maintain aspect ratio */
+}
+
+.patient-caretaker-data {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* gap: 3rem;
+    align-items: center; */
+}
+
+.patient-caretaker-content {
+    color: #fff;
+    text-align: left;
+    margin-left: 45px;
+    margin-top: 10px;
+}
+
+
+.patient-caretaker-image {
+    margin-right: 25px;
+    display: flex;
+    /* Use flexbox for alignment */
+    justify-content: flex-end;
+    /* Align the image to the right */
+    /* Space between text and image */
+}
+
+.patient-caretaker-image img {
+    width: 70%;
+    /* Set the image width to 30% */
+    height: auto;
+    /* Maintain aspect ratio */
+}
+
+.japa-maids-data {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* gap: 3rem;
+    align-items: center; */
+}
+
+.japa-maids-content {
+    color: #fff;
+    text-align: left;
+    margin-left: 45px;
+    margin-top: 10px;
+}
+
+
+.japa-maids-image {
+    margin-right: 25px;
+    display: flex;
+    /* Use flexbox for alignment */
+    justify-content: flex-end;
+    /* Align the image to the right */
+    /* Space between text and image */
+}
+
+.japa-maids-image img {
+    width: 70%;
+    /* Set the image width to 30% */
+    height: auto;
+    /* Maintain aspect ratio */
+}
+
+.guarantees {
+    list-style-type: none;
+    /* Remove default bullet points */
+    padding: 0;
+    /* Remove default padding */
+    margin: 10px 0 0 0;
+    /* Remove default margin */
+    display: flex;
+    /* Use flexbox for layout */
+    flex-wrap: wrap;
+    /* Allow items to wrap to the next line */
+    gap: 10px;
+    /* Space between items */
+}
+
+.guarantees span {
+    display: flex;
+    /* Use flexbox for alignment */
+    align-items: center;
+    /* Center items vertically */
+    flex: 1 1 45%;
+    /* Allow spans to take up to 45% of the width */
+}
+
+.guarantees span::before {
+    content: '';
+    /* Remove the text content */
+    display: inline-block;
+    /* Make it an inline block */
+    width: 20px;
+    /* Set the width of the image */
+    height: 20px;
+    /* Set the height of the image */
+    background-image: url('../images/checkcircle.png');
+    /* Path to your image */
+    background-size: contain;
+    /* Ensure the image fits */
+    background-repeat: no-repeat;
+    /* Prevent the image from repeating */
+    margin-right: 8px;
+    /* Space between image and text */
+}
+
+.next-button {
+    display: inline-block;
+    padding: 10px 20px;
+    color: var(--white);
+    /* Text color */
+    background-color: #162055;
+    /* Blue background */
+    border: 2px solid var(--secondary-color);
+    /* Yellow border */
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    /* Space above the button */
+}
+
+.next-button-container {
+    text-align: left;
+    margin: 0 0 0 30px;
+}
+
+.next-button:hover {
+    background-color: var(--secondary-color);
+    /* Change to yellow on hover */
+    color: #162055;
+    /* Change text color to blue on hover */
 }

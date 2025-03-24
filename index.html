@@ -25,7 +25,7 @@
                     <span class="managed-by">Managed by ODS</span>
                 </div>
                 <ul class="nav-links">
-                    <li><a href="#home">Home</a></li>
+                    <li><a href="#home" class="active">Home</a></li>
                     <li><a href="#services">Our Services</a></li>
                     <li><a href="#reviews">Client Reviews</a></li>
                     <li><a href="#about">About Company</a></li>
@@ -60,6 +60,11 @@
                             alt="song">
                     </label>
                 </div>
+                <div class="radio-controls">
+                    <label for="item-1"></label>
+                    <label for="item-2"></label>
+                    <label for="item-3"></label>
+                </div>
                 <a href="#services" class="btn">Explore Our Services</a>
             </div>
         </div>
@@ -71,11 +76,10 @@
             <h2>About company</h2>
             <div class="about-content">
                 <div class="about-images">
-                    <img src="images/about1.jpg" alt="About Us">
-                    <img src="images/about2.jpg" alt="Our Team">
+                    <img src="images/about1.png" alt="About Us">
                 </div>
                 <div class="about-text">
-                    <h3>Successfully Celebrating of our Services 12+</h3>
+                    <h3>Successfully Celebrating of our Services 12+ years</h3>
                     <p>Established in 2011 in Mumbai. We are trusted domestic staff providers in all over Mumbai, Navi
                         Mumbai, Thane, New Mumbai and full India etc.</p>
                     <ul>
@@ -88,32 +92,144 @@
                     </ul>
                     <p>We understand that maintaining a clean and organized home can be challenging, especially when
                         balancing work, family and social commitments.</p>
-                    <a href="#" class="btn">View More</a>
+
                 </div>
+            </div>
+            <div class="additional-content" id="additionalContent" style="display: none;">
+                <h4>Highly trained staff</h4>
+                <p>Our staff has been well-trained and experienced in their respective jobs.</p>
+                <h4>Quality cleaning tools</h4>
+                <p>Our staff uses various devices for cleaning, so that your apartment can never lose its shine.</p>
+                <h4>Effective Services</h4>
+                <p>We provide you services that are most reliable and effective for your job.</p>
+                <h4>Best Prices</h4>
+                <p>We provide you various services at your affordable prices.</p>
+                <h4>Background check of staff</h4>
+                <p>Our staff has been well-trained and experienced in their respective jobs.</p>
+                <h4>Faster than you think</h4>
+                <p>Our replacement policy for our staff works faster than you think.</p>
+            </div>
+            <div class="button-container">
+                <a href="#" class="abtbtn" id="toggleButton">View More</a>
             </div>
         </div>
     </section>
 
     <!-- Services Section -->
     <section id="services" class="services">
-        <div class="container">
+        <div class="servicescontainer">
             <h2>Our services</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <img src="images/housekeeper.png" alt="Housekeeper">
-                    <h3>Housekeeper</h3>
-                    <ul>
-                        <li>Dusting the furniture</li>
-                        <li>Sweeping & cleaning the floor</li>
-                        <li>Washing all clothes in machine along with drying and folding</li>
-                        <li>Cooking meals(Optional)</li>
-                    </ul>
-                    <div class="guarantees">
-                        <span>100% satisfaction guarantee</span>
-                        <span>100% satisfaction guarantee</span>
+            <div class="tabs">
+                <button class="tab-button active" data-tab="housekeeper">Housekeeper</button>
+                <button class="tab-button" data-tab="baby-caretaker">Baby Caretaker</button>
+                <button class="tab-button" data-tab="patient-caretaker">Patient Caretaker</button>
+                <button class="tab-button" data-tab="japa-maids">Japa Maids</button>
+            </div>
+            <div class="tab-content" id="housekeeper">
+                <h3>Housekeeper</h3>
+                <div class="housekeeper-data">
+                    <div class="housekeeper-content">
+                        <ul>
+                            <li>Dusting the furniture</li>
+                            <li>Sweeping & mopping the floor</li>
+                            <li>Washing utensils</li>
+                            <li>Washing clothes in machine along with drying and folding</li>
+                            <li>Cooking meals (Optional)</li>
+                        </ul>
+                        <div class="guarantees">
+                            <span>Professional</span>
+                            <span>Profile verified</span>
+                            <span>Quick Service</span>
+                            <span>100% satisfaction guarantee</span>
+                        </div>
+                    </div>
+                    <div class="housekeeper-image">
+                        <img src="images/housekeeperimage.png" alt="Housekeeper" width="30%">
                     </div>
                 </div>
-                <!-- Add other service cards similarly -->
+                <div class="next-button-container">
+                    <button class="next-button" id="nextButton1">Next →</button>
+                </div>
+            </div>
+            <div class="tab-content" id="baby-caretaker" style="display: none;">
+                <h3>Baby Caretaker</h3>
+                <div class="baby-caretaker-data">
+                    <div class="baby-caretaker-content">
+                        <ul>
+                            <li>Dusting the furniture</li>
+                            <li>Sweeping & mopping the floor</li>
+                            <li>Washing utensils</li>
+                            <li>Washing clothes in machine along with drying and folding</li>
+                            <li>Cooking meals (Optional)</li>
+                        </ul>
+                        <div class="guarantees">
+                            <span>Professional</span>
+                            <span>Profile verified</span>
+                            <span>Quick Service</span>
+                            <span>100% satisfaction guarantee</span>
+                        </div>
+                    </div>
+                    <div class="baby-caretaker-image">
+                        <img src="images/housekeeperimage.png" alt="Housekeeper" width="30%">
+                    </div>
+                </div>
+                <div class="next-button-container">
+                    <button class="next-button" id="nextButton2">Next →</button>
+                </div>
+            </div>
+
+            <div class="tab-content" id="patient-caretaker" style="display: none;">
+                <h3>Patient Caretaker</h3>
+                <div class="patient-caretaker-data">
+                    <div class="patient-caretaker-content">
+                        <ul>
+                            <li>Dusting the furniture</li>
+                            <li>Sweeping & mopping the floor</li>
+                            <li>Washing utensils</li>
+                            <li>Washing clothes in machine along with drying and folding</li>
+                            <li>Cooking meals (Optional)</li>
+                        </ul>
+                        <div class="guarantees">
+                            <span>Professional</span>
+                            <span>Profile verified</span>
+                            <span>Quick Service</span>
+                            <span>100% satisfaction guarantee</span>
+                        </div>
+                    </div>
+                    <div class="patient-caretaker-image">
+                        <img src="images/housekeeperimage.png" alt="Patientcaretaker" width="30%">
+                    </div>
+                </div>
+                <div class="next-button-container">
+                    <button class="next-button" id="nextButton3">Next →</button>
+                </div>
+            </div>
+
+            <div class="tab-content" id="japa-maids" style="display: none;">
+                <h3>Japa Maids</h3>
+                <div class="japa-maids-data">
+                    <div class="japa-maids-content">
+                        <ul>
+                            <li>Dusting the furniture</li>
+                            <li>Sweeping & mopping the floor</li>
+                            <li>Washing utensils</li>
+                            <li>Washing clothes in machine along with drying and folding</li>
+                            <li>Cooking meals (Optional)</li>
+                        </ul>
+                        <div class="guarantees">
+                            <span>Professional</span>
+                            <span>Profile verified</span>
+                            <span>Quick Service</span>
+                            <span>100% satisfaction guarantee</span>
+                        </div>
+                    </div>
+                    <div class="japa-maids-image">
+                        <img src="images/housekeeperimage.png" alt="Japa Maids" width="30%">
+                    </div>
+                </div>
+                <div class="next-button-container">
+                    <button class="next-button" id="nextButton4">Next →</button>
+                </div>
             </div>
         </div>
     </section>
@@ -208,6 +324,73 @@
                 nav: false,
                 dots: true
             });
+        });
+    </script>
+    <script>
+        document.getElementById('toggleButton').addEventListener('click', function (event) {
+            event.preventDefault(); // Prevent the default anchor behavior
+            const additionalContent = document.getElementById('additionalContent');
+            const buttonText = this;
+
+            if (additionalContent.style.display === 'none') {
+                additionalContent.style.display = 'block'; // Show additional content
+                buttonText.textContent = 'View Less'; // Change button text
+            } else {
+                additionalContent.style.display = 'none'; // Hide additional content
+                buttonText.textContent = 'View More'; // Change button text back
+            }
+        });
+    </script>
+
+    <script>
+        const tabButtons = document.querySelectorAll('.tab-button');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const tabId = button.getAttribute('data-tab');
+
+                // Remove active class from all buttons
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                // Hide all tab contents
+                tabContents.forEach(content => content.style.display = 'none');
+
+                // Add active class to the clicked button
+                button.classList.add('active');
+                // Show the corresponding tab content
+                document.getElementById(tabId).style.display = 'block';
+            });
+        });
+    </script>
+    <script>
+        document.getElementById('nextButton1').addEventListener('click', function () {
+            // Simulate a click on the Baby Caretaker tab button
+            const babyCaretakerButton = document.querySelector('.tab-button[data-tab="baby-caretaker"]');
+            babyCaretakerButton.click();
+        });
+    </script>
+
+    <script>
+        document.getElementById('nextButton2').addEventListener('click', function () {
+            // Simulate a click on the Baby Caretaker tab button
+            const babyCaretakerButton = document.querySelector('.tab-button[data-tab="patient-caretaker"]');
+            babyCaretakerButton.click();
+        });
+    </script>
+
+    <script>
+        document.getElementById('nextButton3').addEventListener('click', function () {
+            // Simulate a click on the Baby Caretaker tab button
+            const babyCaretakerButton = document.querySelector('.tab-button[data-tab="japa-maids"]');
+            babyCaretakerButton.click();
+        });
+    </script>
+
+    <script>
+        document.getElementById('nextButton4').addEventListener('click', function () {
+            // Simulate a click on the Baby Caretaker tab button
+            const babyCaretakerButton = document.querySelector('.tab-button[data-tab="housekeeper"]');
+            babyCaretakerButton.click();
         });
     </script>
     <script src="js/main1.js"></script>
