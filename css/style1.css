@@ -25,6 +25,10 @@ body {
         background-color: #428aa6;
     }
 } */
+body {
+    font-family: 'Inter', Arial, sans-serif;
+    /* Use Inter font */
+}
 
 input[type=radio] {
     display: none;
